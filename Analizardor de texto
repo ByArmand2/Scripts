@@ -1,0 +1,20 @@
+print("ESTE ES UN ANALIZADOR DE TEXTO")
+print("EL TEXTO INGRESADO NO PUEDE CONTENER ESPACIOS ENTRE PARRAFOS")
+texto=input("Ingresa el texto a analizar: ")
+texto=texto.lower()
+print('\n')
+print("CANTIDAD DE PALABRAS QUE TIENE EL TEXTO")
+cantidad_palabras=texto.split()
+total_palabras=len(cantidad_palabras)
+print(f"El total de palabras que contiene tu texto es de: {total_palabras}")
+print('\n')
+numero_palabras=int(input("Ingresa el numero de palabras que quieres buscar: "))
+lista=[]
+for i in range(0,numero_palabras):
+    lista.append(input(f"Ingresa la palabra numero {i+1}: ").lower())
+#print(lista)
+#print(len(lista))
+#print(texto)
+for j in range(0,len(lista)):
+    cantidad=texto.count(lista[j])
+    print(f"El numero de veces que se repite '{lista[j]}' es de {cantidad}")
